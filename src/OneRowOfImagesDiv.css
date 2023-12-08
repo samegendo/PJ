@@ -1,0 +1,6 @@
+.OneRowOfImagesDiv {
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}

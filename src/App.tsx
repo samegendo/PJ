@@ -1,34 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import OneRowOfImagesDiv from './OneRowOfImagesDiv';
 
-function App() {
-
-  for (let y = 1.5; y > -1.5; y -= 0.1) {
-    for (let x = -1.5; x < 1.5; x += 0.05) {
-      let a = x * x + y * y - 1;
-      console.log(a * a * a - x * x * y * y * y <= 0 ? "*" : " ");
-      //cw
-    }
-  }
+const App = () => {
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <img src="backgroun9.jpg" alt="" width={100} height={100} />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+      <div style={{ display: 'inline-block' }} >
+        <div>
+          {Array(10).fill(null).map((item, index) => <OneRowOfImagesDiv stars={index} />)}
+        </div>
+        <div>
+          {Array(10).fill(null).map((item, index) => <OneRowOfImagesDiv stars={index} />)}
+        </div>
+      </div>
+
+      <div>
+        {Array(20).fill(null).map((item, index) => <OneRowOfImagesDiv stars={20 - index} />)}
+      </div>
+
     </div>
   );
 }
