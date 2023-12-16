@@ -1,4 +1,9 @@
-.containerTopTriangles {
+.twoTopPartsOfHeartShape {
     display: flex;
+    justify-content: center;
+}
+
+.bottomPartOfHeartShape {
+    display: grid;
     justify-content: center;
 }
