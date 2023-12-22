@@ -10,8 +10,8 @@ const App = () => {
       array1achter: 3,
       array2voor: 6,
       array2achter: 8,
-      array3voor: 2,
-      array3achter: 1
+      array3voor: 1,
+      array3achter: 2
     },
     {
       stand: 1,
@@ -25,11 +25,11 @@ const App = () => {
     {
       stand: 2,
       array1voor: 4,
-      array1achter: 4,
+      array1achter: 5,
       array2voor: 8,
-      array2achter: 14,
-      array3voor: 4,
-      array3achter: 5
+      array2achter: 16,
+      array3voor: 6,
+      array3achter: 7
     }
   ]);
 
@@ -70,7 +70,6 @@ const App = () => {
             {Array(getSelectedStandObject.array2voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={getSelectedStandObject.array2achter - index} />)}
             {Array(getSelectedStandObject.array3voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={getSelectedStandObject.array3achter - index} />)}
           </div>
-
         </div>
       }
 
