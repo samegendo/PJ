@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import OneRowOfImagesDiv from './OneRowOfImagesDiv';
 
@@ -33,25 +33,46 @@ const App = () => {
     }
   ]);
 
-  const [getSelectedStand, setSelectedStand] = useState<any>(0);
+  const [getSelectedStand, setSelectedStand] = useState<any>(1);
 
-  const [getSelectedStandObject, setSelectedStandObject] = useState<any>(getAlleStanden.find((x: any) => x.stand === getSelectedStand));
+  const [getSelectedStandObject, setSelectedStandObject] = useState<any>(getAlleStanden[1]);
+
+  const handleRangeChange = (value: any) => {
+    setSelectedStand(value);
+    if (value === "0") { setSelectedStandObject(getAlleStanden[0]) }
+    if (value === "1") { setSelectedStandObject(getAlleStanden[1]) }
+    if (value === "2") { setSelectedStandObject(getAlleStanden[2]) }
+  }
 
   return (
     <div>
 
-      <div className='twoTopPartsOfHeartShape' >
-        {Array(2).fill(null).map(item =>
-          <div>
-            {Array(getSelectedStandObject.array1voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={index + getSelectedStandObject.array1achter} />)}
-          </div>
-        )}
-      </div>
+      <input
+        type="range"
+        min="0"
+        max="2"
+        step="1"
+        value={getSelectedStand}
+        onChange={(event) => handleRangeChange(event?.target.value)}
+      />
 
-      <div className='bottomPartOfHeartShape'>
-        {Array(getSelectedStandObject.array2voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={getSelectedStandObject.array2achter - index} />)}
-        {Array(getSelectedStandObject.array3voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={getSelectedStandObject.array3achter - index} />)}
-      </div>
+      {getSelectedStandObject &&
+        <div>
+          <div className='twoTopPartsOfHeartShape' >
+            {Array(2).fill(null).map(item =>
+              <div>
+                {Array(getSelectedStandObject.array1voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={index + getSelectedStandObject.array1achter} />)}
+              </div>
+            )}
+          </div>
+
+          <div className='bottomPartOfHeartShape'>
+            {Array(getSelectedStandObject.array2voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={getSelectedStandObject.array2achter - index} />)}
+            {Array(getSelectedStandObject.array3voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={getSelectedStandObject.array3achter - index} />)}
+          </div>
+
+        </div>
+      }
 
     </div>
   );

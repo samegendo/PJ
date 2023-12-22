@@ -3,7 +3,7 @@ import './OneRowOfImagesDiv.css';
 
 //         {Array(stars).fill(null).map(item => <div style={{ backgroundColor: 'yellow' }} >*</div>)}
 
-const HalfDiv = ({ stars }: any) => {
+const OneRowOfImagesDiv = ({ stars }: any) => {
     const [showText, setShowText] = useState<any>(false);
     //onClick={() => setShowText((item: any) => !item)}
 
@@ -15,11 +15,10 @@ const HalfDiv = ({ stars }: any) => {
                 <div className="flip-box">
                     <div className="flip-box-inner">
                         <div className="flip-box-front">
-                            <img src="favicon.ico" alt="Paris" style={{ width: "30px", height: "30px" }} />
+                            <img src="favicon.ico" alt="" style={{ width: "100%", height: "100%" }} />
                         </div>
                         <div className="flip-box-back">
-                            <h2>Paris</h2>
-                            <p>What an amazing city</p>
+                            <p>What an amazing city What an amazing city What an amazing city What an amazing city</p>
                         </div>
                     </div>
                 </div>
@@ -29,4 +28,4 @@ const HalfDiv = ({ stars }: any) => {
     );
 }
 
-export default HalfDiv;
+export default OneRowOfImagesDiv;
