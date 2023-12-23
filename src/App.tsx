@@ -3,76 +3,60 @@ import './App.css';
 import OneRowOfImagesDiv from './OneRowOfImagesDiv';
 
 const App = () => {
-  const [getAlleStanden, setAlleStanden] = useState<any>([
-    {
-      stand: 0,
-      array1voor: 2,
-      array1achter: 3,
-      array2voor: 6,
-      array2achter: 8,
-      array3voor: 1,
-      array3achter: 2
-    },
-    {
-      stand: 1,
-      array1voor: 3,
-      array1achter: 4,
-      array2voor: 7,
-      array2achter: 12,
-      array3voor: 3,
-      array3achter: 4
-    },
-    {
-      stand: 2,
-      array1voor: 4,
-      array1achter: 5,
-      array2voor: 8,
-      array2achter: 16,
-      array3voor: 6,
-      array3achter: 7
-    }
-  ]);
+  const [array1voor, setArray1voor] = useState<any>(3);
+  const [array1achter, setArray1achter] = useState<any>(4);
+  const [array2voor, setArray2voor] = useState<any>(7);
+  const [array2achter, setArray2achter] = useState<any>(12);
+  const [array3voor, setArray3voor] = useState<any>(3);
+  const [array3achter, setArray3achter] = useState<any>(4);
 
   const [getSelectedStand, setSelectedStand] = useState<any>(1);
 
-  const [getSelectedStandObject, setSelectedStandObject] = useState<any>(getAlleStanden[1]);
-
-  const handleRangeChange = (value: any) => {
+  const handleRangeChange2 = (value: any) => {
+    let x = getSelectedStand;
+    if (value > x) {
+      setArray1voor(array1voor + 1);
+      setArray1achter(array1achter + 1);
+      setArray2voor(array2voor + 1);
+      setArray2achter(array2achter + 4);
+      setArray3voor(array3voor + 2);
+      setArray3achter(array3achter + 2);
+    }
+    if (value < x) {
+      setArray1voor(array1voor - 1);
+      setArray1achter(array1achter - 1);
+      setArray2voor(array2voor - 1);
+      setArray2achter(array2achter - 4);
+      setArray3voor(array3voor - 2);
+      setArray3achter(array3achter - 2);
+    }
     setSelectedStand(value);
-    if (value === "0") { setSelectedStandObject(getAlleStanden[0]) }
-    if (value === "1") { setSelectedStandObject(getAlleStanden[1]) }
-    if (value === "2") { setSelectedStandObject(getAlleStanden[2]) }
   }
 
   return (
     <div>
-
       <input
         type="range"
         min="0"
-        max="2"
+        max="3"
         step="1"
         value={getSelectedStand}
-        onChange={(event) => handleRangeChange(event?.target.value)}
+        onChange={(event) => handleRangeChange2(event?.target.value)}
       />
 
-      {getSelectedStandObject &&
-        <div>
-          <div className='twoTopPartsOfHeartShape' >
-            {Array(2).fill(null).map(item =>
-              <div>
-                {Array(getSelectedStandObject.array1voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={index + getSelectedStandObject.array1achter} />)}
-              </div>
-            )}
-          </div>
-
-          <div className='bottomPartOfHeartShape'>
-            {Array(getSelectedStandObject.array2voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={getSelectedStandObject.array2achter - index} />)}
-            {Array(getSelectedStandObject.array3voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={getSelectedStandObject.array3achter - index} />)}
-          </div>
+      <div>
+        <div className='twoTopPartsOfHeartShape' >
+          {Array(2).fill(null).map(item =>
+            <div>
+              {Array(array1voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={index + array1achter} />)}
+            </div>
+          )}
         </div>
-      }
-
+        <div className='bottomPartOfHeartShape'>
+          {Array(array2voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={array2achter - index} />)}
+          {Array(array3voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={array3achter - index} />)}
+        </div>
+      </div>
     </div>
   );
 }
