@@ -20,7 +20,7 @@ const App = () => {
       setArray2voor(array2voor + 1);
       setArray2achter(array2achter + 4);
       setArray3voor(array3voor + 2);
-      setArray3achter(array3achter + 2);
+      setArray3achter(array3achter + 3);
     }
     if (value < x) {
       setArray1voor(array1voor - 1);
@@ -28,10 +28,29 @@ const App = () => {
       setArray2voor(array2voor - 1);
       setArray2achter(array2achter - 4);
       setArray3voor(array3voor - 2);
-      setArray3achter(array3achter - 2);
+      setArray3achter(array3achter - 3);
     }
     setSelectedStand(value);
   }
+
+  const array_sum = (my_array: any): any => {
+    if (my_array.length === 1) { return my_array[0]; }
+    else { return my_array.pop() + array_sum(my_array); }
+  };
+
+  const sum = (voor: any, achter: any, arraynummer: any) => {
+    let array = [];
+    for (let i = 1; i <= voor; i++) {
+      //array.push(achter--);
+      if (arraynummer > 1) array.push(achter - i + 1);
+      else array.push((achter + i - 1) * 2);
+    }
+    return array_sum(array);
+  }
+
+  sum(array1voor, array1achter, 1);
+  sum(array2voor, array2achter, 2);
+  sum(array3voor, array3achter, 3);
 
   return (
     <div>

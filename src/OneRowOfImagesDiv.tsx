@@ -3,11 +3,13 @@ import './OneRowOfImagesDiv.css';
 
 //         {Array(stars).fill(null).map(item => <div style={{ backgroundColor: 'yellow' }} >*</div>)}
 
-const OneRowOfImagesDiv = ({ stars }: any) => {
+const OneRowOfImagesDiv = ({ stars, numberOfStars }: any) => {
     const [showText, setShowText] = useState<any>(false);
     //onClick={() => setShowText((item: any) => !item)}
 
     //   {Array(stars).fill(null).map(item => <img src="favicon.ico" alt="" />)}
+
+    console.log(numberOfStars)
 
     return (
         <div className='OneRowOfImagesDiv' >
