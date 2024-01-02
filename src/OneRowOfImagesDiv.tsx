@@ -1,31 +1,15 @@
 import React, { useState } from 'react';
 import './OneRowOfImagesDiv.css';
+import OneImage from './OneImage';
 
-//         {Array(stars).fill(null).map(item => <div style={{ backgroundColor: 'yellow' }} >*</div>)}
-
-const OneRowOfImagesDiv = ({ stars, numberOfStars }: any) => {
+const OneRowOfImagesDiv = ({ stars, teksten }: any) => {
     const [showText, setShowText] = useState<any>(false);
+
     //onClick={() => setShowText((item: any) => !item)}
-
-    //   {Array(stars).fill(null).map(item => <img src="favicon.ico" alt="" />)}
-
-    console.log(numberOfStars)
 
     return (
         <div className='OneRowOfImagesDiv' >
-            {Array(stars).fill(null).map(item =>
-                <div className="flip-box">
-                    <div className="flip-box-inner">
-                        <div className="flip-box-front">
-                            <img src="favicon.ico" alt="" style={{ width: "100%", height: "100%" }} />
-                        </div>
-                        <div className="flip-box-back">
-                            <p>What an amazing city What an amazing city What an amazing city What an amazing city</p>
-                        </div>
-                    </div>
-                </div>
-            )}
-
+            {Array(stars).fill(null).map((item, index) => <OneImage teksten={teksten} />)}
         </div>
     );
 }
