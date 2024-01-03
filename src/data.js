@@ -171,5 +171,7 @@ export default [
     "Ik die niet hard genoeg durf masseren om jou niet te breken",
     "Niemand praat jou in slaap zoals ik dat kan. Kometen en planeten.",
     "Fietsen in Bazel. Met de elektrische fiets vond je het zo leuk.",
-    "Naar de luchtballonnen gaan zien in Sint-Niklaas."
+    "Naar de luchtballonnen gaan zien in Sint-Niklaas.",
+    "Wortelstoemp, met liefde gemaakt.",
+    "Rondrit Nederland met Deltawerken."
 ]

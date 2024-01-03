@@ -28,8 +28,6 @@ const App = () => {
     else { return my_array.pop() + array_sum(my_array); }
   };
 
-  let testarray: any = [];
-
   const sum = (voor: any, achter: any, arraynummer: any) => {
     let array = [];
 
@@ -37,11 +35,9 @@ const App = () => {
       //array.push(achter--);
       if (arraynummer > 1) {
         array.push(achter - i + 1);
-        testarray.push(achter - i + 1);
       }
       else {
         array.push((achter + i - 1) * 2);
-        testarray.push(achter + i - 1);
       }
     }
     return array_sum(array);
@@ -54,7 +50,6 @@ const App = () => {
       sum(array2voor, array2achter, 2) +
       sum(array3voor, array3achter, 3))
   );
-
 
   const handleRangeChange2 = (value: any) => {
     let x = getSelectedStand;
@@ -80,6 +75,11 @@ const App = () => {
   //sum(arrayOfArrays, array1voor, array1achter, 1);
   //sum(array2voor, array2achter, 2);
   //sum(array3voor, array3achter, 3);
+
+  useEffect(() => {
+    //console.log("totaal aantal" + " " + arrayOfTotalNumbers);
+    console.log(array1voor)
+  }, [getSelectedStand])
 
   return (
     <div>
