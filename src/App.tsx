@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import OneRowOfImagesDiv from './OneRowOfImagesDiv';
 import teksten from './data';
+const images = require.context('/imgs', true);
+const imageList = images.keys().map(image => images(image));
 
 const App = () => {
   const [array1voor, setArray1voor] = useState<any>(3);
@@ -21,7 +23,9 @@ const App = () => {
     return arr;
   }
 
-  console.log("lengte" + " " + teksten.length);
+  console.log("lengte van teksten" + " " + teksten.length);
+  console.log("lengte van foto's" + " " + imageList.length);
+
 
   const array_sum = (my_array: any): any => {
     if (my_array.length === 1) { return my_array[0]; }
@@ -96,13 +100,13 @@ const App = () => {
         <div className='twoTopPartsOfHeartShape' >
           {Array(2).fill(null).map(item =>
             <div>
-              {Array(array1voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={index + array1achter} teksten={teksten} />)}
+              {Array(array1voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={index + array1achter} teksten={teksten} images={imageList} />)}
             </div>
           )}
         </div>
         <div className='bottomPartOfHeartShape'>
-          {Array(array2voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={array2achter - index} teksten={teksten} />)}
-          {Array(array3voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={array3achter - index} teksten={teksten} />)}
+          {Array(array2voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={array2achter - index} teksten={teksten} images={imageList} />)}
+          {Array(array3voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={array3achter - index} teksten={teksten} images={imageList} />)}
         </div>
       </div>
     </div>
