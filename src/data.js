@@ -173,5 +173,22 @@ export default [
     "Fietsen in Bazel. Met de elektrische fiets vond je het zo leuk.",
     "Naar de luchtballonnen gaan zien in Sint-Niklaas.",
     "Wortelstoemp, met liefde gemaakt.",
-    "Rondrit Nederland met Deltawerken."
+    "Rondrit Nederland met Deltawerken.",
+    "Spelletje bijten of blazen op de buik, drie vragen.",
+    "Badminton op de parking van Colruyt of aan't Ster.",
+    "Allebei in shock na het weekend met neven en nichten.",
+    "Samen uitgaan met neven en nichten in Hanger 26.",
+    "Naar Carré met Peter en Nasteha.",
+    "Waterfietsen",
+    "Kajakken op de Lilse Bergen.",
+    "Aan de Bazelse Kreek gaan liggen.",
+    "Kleine, flinke meid!",
+    "Altijd een stap voor op mij.",
+    "Samen beugel gedragen.",
+    "Jouw eerste dag met de beugel. Jouw mond als je moest lachen.",
+    "In de auto altijd hand in hand rijden.",
+    "Samen rollen in bed.",
+    "In Prinsstraat met bibberende benen van de trappen gaan...",
+    "Samen tuinieren",
+    "Jij kijkt in mijn ogen als je drinkt."
 ]

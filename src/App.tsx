@@ -16,16 +16,8 @@ const App = () => {
   const [array3voor, setArray3voor] = useState<any>(3);
   const [array3achter, setArray3achter] = useState<any>(4);
 
-  //Stand van de grootte van het hart
+  //Stand van de inputrange/grootte van het hart
   const [getSelectedStand, setSelectedStand] = useState<any>(1);
-
-  const fillArrayOfNumbers = (total: any) => {
-    let arr = [];
-    for (let i = 1; i <= total; i++) {
-      arr.push(i);
-    }
-    return arr;
-  }
 
   //Som berekenen van een array via recursie
   const array_sum = (my_array: any): any => {
@@ -72,7 +64,9 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div >
+      <p>Aantal quotes: {teksten.length}</p>
+      <p>Totaal aantal foto's: {imageList.length}, aantal foto's hier getoond: {sum(array1voor, array1achter, 1) + sum(array2voor, array2achter, 2) + sum(array3voor, array3achter, 3)}</p>
       <input
         type="range"
         min="0"
@@ -82,7 +76,7 @@ const App = () => {
         onChange={(event) => handleRangeChange2(event?.target.value)}
       />
 
-      <div>
+      <div >
         <div className='twoTopPartsOfHeartShape' >
           {Array(2).fill(null).map(item =>
             <div>
