@@ -1,4 +1,5 @@
 import React from 'react';
+import './OneImage.css';
 
 const OneImage = ({ teksten, images }: any) => {
     return (

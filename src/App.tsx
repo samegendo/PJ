@@ -76,7 +76,7 @@ const App = () => {
         onChange={(event) => handleRangeChange2(event?.target.value)}
       />
 
-      <div >
+      <div className='volledighart' >
         <div className='twoTopPartsOfHeartShape' >
           {Array(2).fill(null).map(item =>
             <div>

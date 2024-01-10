@@ -1,10 +1,14 @@
 .twoTopPartsOfHeartShape {
     display: flex;
     justify-content: center;
+    background-color: blue;
+
 }
 
 .bottomPartOfHeartShape {
     display: grid;
     justify-content: center;
+    background-color: green;
+
 }
 
