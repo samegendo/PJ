@@ -64,31 +64,32 @@ const App = () => {
   }
 
   return (
-    <div >
-      <p>Aantal quotes: {teksten.length}</p>
-      <p>Totaal aantal foto's: {imageList.length}, aantal foto's hier getoond: {sum(array1voor, array1achter, 1) + sum(array2voor, array2achter, 2) + sum(array3voor, array3achter, 3)}</p>
-      <input
-        type="range"
-        min="0"
-        max="3"
-        step="1"
-        value={getSelectedStand}
-        onChange={(event) => handleRangeChange2(event?.target.value)}
-      />
+    <div>
+      <div className='head'  >
+        <p>Aantal quotes: {teksten.length}</p>
+        <p>Totaal aantal foto's: {imageList.length}, aantal foto's hier getoond: {sum(array1voor, array1achter, 1) + sum(array2voor, array2achter, 2) + sum(array3voor, array3achter, 3)}</p>
+        <input
+          type="range"
+          min="0"
+          max="3"
+          step="1"
+          value={getSelectedStand}
+          onChange={(event) => handleRangeChange2(event?.target.value)}
+        />
+      </div>
 
-      <div className='volledighart' >
-        <div className='twoTopPartsOfHeartShape' >
-          {Array(2).fill(null).map(item =>
-            <div>
-              {Array(array1voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={index + array1achter} teksten={teksten} images={imageList} />)}
-            </div>
-          )}
+      <div>
+        <div className='twoTopPartsOfHeartShape'>
+          <div> {Array(array1voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={index + array1achter} teksten={teksten} images={imageList} />)}</div>
+          <div> {Array(array1voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={index + array1achter} teksten={teksten} images={imageList} />)}</div>
         </div>
+
         <div className='bottomPartOfHeartShape'>
           {Array(array2voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={array2achter - index} teksten={teksten} images={imageList} />)}
           {Array(array3voor).fill(null).map((item, index) => <OneRowOfImagesDiv stars={array3achter - index} teksten={teksten} images={imageList} />)}
         </div>
       </div>
+
     </div>
   );
 }

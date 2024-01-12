@@ -1,14 +1,24 @@
 .twoTopPartsOfHeartShape {
     display: flex;
     justify-content: center;
-    background-color: blue;
-
+    width: fit-content;
+    margin: auto;
 }
 
 .bottomPartOfHeartShape {
-    display: grid;
-    justify-content: center;
-    background-color: green;
-
+    width: fit-content;
+    margin: auto;
 }
+
+.totalHeartShape{
+    background-color: #22e380;
+    background-color: #81fbb8;
+    background-color: #C3B1E1;
+}
+
+.head{
+    background-color: #C3B1E1;
+}
+
+/* in index.css staat de achtergrondkleur van de totale body */
 
