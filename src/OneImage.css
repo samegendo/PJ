@@ -4,7 +4,7 @@
     background-color: transparent;
     width: 60px;
     height: 50px;
-    border: 1px solid #f1f1f1;
+    border: 1px solid white;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
   
@@ -34,15 +34,15 @@
   
   /* Style the front side (fallback if image is missing) */
   .flip-box-front {
-    background-color: #bbb;
+    background-color: #22e380;
     color: black;
   }
   
   /* Style the back side */
   .flip-box-back {
-    background-color: dodgerblue;
+    background-color: #81fbb8;
     color: black;
     transform: rotateY(180deg);
     overflow: auto;
-    font-size: 9px;
+    font-size: 5%;
   }

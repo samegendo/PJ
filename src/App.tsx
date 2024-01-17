@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import OneRowOfImagesDiv from './OneRowOfImagesDiv';
 import teksten from './data';
+import './InputRange.css'
 
 //Foto's importeren => uit map in array steken
 const images = require.context('/imgs', true);
@@ -66,8 +67,12 @@ const App = () => {
   return (
     <div>
       <div className='head'  >
-        <p>Aantal quotes: {teksten.length}</p>
-        <p>Totaal aantal foto's: {imageList.length}, aantal foto's hier getoond: {sum(array1voor, array1achter, 1) + sum(array2voor, array2achter, 2) + sum(array3voor, array3achter, 3)}</p>
+        <div className='leftLabel' >Aantal quotes:</div>
+        <div className='rightLabel' >{teksten.length}</div> <br />
+        <div className='leftLabel' >Totaal aantal foto's:</div>
+        <div className='rightLabel' >{imageList.length}</div> <br /><br />
+        <div className='leftLabel' >Stel hier de grootte van het hart in:</div>
+        <div className='rightLabel' >{sum(array1voor, array1achter, 1) + sum(array2voor, array2achter, 2) + sum(array3voor, array3achter, 3)}</div> <br />
         <input
           type="range"
           min="0"

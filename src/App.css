@@ -20,5 +20,19 @@
     background-color: #C3B1E1;
 }
 
+.rightLabel {
+    color: white;
+    display: inline-block;
+}
+
+.leftLabel{
+    color: white;
+    display: inline-block;
+    min-width: 300px;
+}
+
+
+ 
+
 /* in index.css staat de achtergrondkleur van de totale body */
 
