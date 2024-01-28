@@ -2,8 +2,8 @@
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
     background-color: transparent;
-    width: 60px;
-    height: 50px;
+    width: 84px;
+    height: 70px;
     border: 1px solid white;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
@@ -46,3 +46,160 @@
     overflow: auto;
     font-size: 5%;
   }
+
+
+
+
+  /* @MEDIA KLEIN HART */
+  @media screen and (max-width: 1280px){
+    .flip-box {
+      width: 84px;
+      height: 70px;
+    }
+  }
+
+  @media screen and (max-width: 1024px){
+    .flip-box {
+      width: 120px;
+      height: 100px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) and (orientation: landscape) { 
+    .flip-box {
+      width: 60px;
+      height: 50px;
+    }
+   }
+
+  @media screen and (max-width: 912px){
+    .flip-box {
+      width: 108px;
+      height: 90px;
+    }
+  }
+
+  @media screen and (max-width: 820px){
+    .flip-box {
+      width: 96px;
+      height: 80px;
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    .flip-box {
+      width: 84px;
+      height: 70px;
+    }
+  }
+
+  @media screen and (max-width: 640px) and (orientation: landscape) { 
+    .flip-box {
+      width: 30px;
+      height: 25px;
+    }
+   }
+
+  @media screen and (max-width: 600px){
+    .flip-box {
+      width: 72px;
+      height: 60px;
+    }
+  }
+
+  @media screen and (max-width: 540px){
+    .flip-box {
+      width: 60px;
+      height: 50px;
+    }
+  }
+
+  @media screen and (max-width: 480px){
+    .flip-box {
+      width: 54px;
+      height: 45px;
+    }
+  }
+
+  @media screen and (max-width: 430px){
+    .flip-box {
+      width: 48px;
+      height: 40px;
+    }
+  }
+
+  @media screen and (max-width: 414px){
+    .flip-box {
+      width: 48px;
+      height: 40px;
+    }
+  }
+
+  @media screen and (max-width: 412px){
+    .flip-box {
+      width: 48px;
+      height: 40px;
+    }
+  }
+
+  @media screen and (max-width: 393px){
+    .flip-box {
+      width: 42px;
+      height: 35px;
+    }
+  }
+
+  @media screen and (max-width: 390px){
+    .flip-box {
+      width: 42px;
+      height: 35px;
+    }
+  }
+
+  @media screen and (max-width: 375px){
+    .flip-box {
+      width: 42px;
+      height: 35px;
+    }
+  }
+
+  @media screen and (max-width: 360px){
+    .flip-box {
+      width: 42px;
+      height: 35px;
+    }
+  }
+
+  @media screen and (max-width: 353px){
+    .flip-box {
+      width: 36px;
+      height: 30px;
+    }
+  }
+
+  @media screen and (max-width: 320px){
+    .flip-box {
+      width: 36px;
+      height: 30px;
+    }
+  }
+
+  @media screen and (max-width: 280px){
+    .flip-box {
+      width: 30px;
+      height: 25px;
+    }
+  }
+
+  @media screen and (max-width: 240px){ /*lukt niet echt*/
+    .flip-box {
+      width: 24px;
+      height: 20px;
+    }
+  }
+
+
+
+
+
+
