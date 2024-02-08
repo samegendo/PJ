@@ -1,0 +1,33 @@
+
+.twoTopPartsOfHeartShape {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
+}
+
+.bottomPartOfHeartShape {
+    width: fit-content;
+    margin: auto;
+}
+
+.head{
+    background-color: #C3B1E1;
+}
+
+.rightLabel {
+    color: white;
+    display: inline-block;
+}
+
+.leftLabel{
+    color: white;
+    display: inline-block;
+    min-width: 300px;
+}
+
+
+ 
+
+/* in index.css staat de achtergrondkleur van de totale body */
+

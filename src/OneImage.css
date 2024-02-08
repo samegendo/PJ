@@ -34,8 +34,8 @@
   
   /* Style the front side (fallback if image is missing) */
   .flip-box-front {
-    background-color: #22e380;
-    color: black;
+    background-color: #C3B1E1;
+    color: white;
   }
   
   /* Style the back side */
