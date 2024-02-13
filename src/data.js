@@ -118,6 +118,7 @@ export default [
     "Naar de shopping in Duitsland",
     "Etentjes bij mama en papa",
     "Nasteha en Peter leren kennen",
+    "Samen La Mamadora zingen in bed",
     "jij mijn hele familie leren kennen en zij houden van jou",
     "Valentijn dikwijls gevierd",
     "Verjaardagen gevierd met vele taarten",
