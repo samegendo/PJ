@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 
 const Login = ({ password, setPassword }: any) => {
-
     return (
         <div>
             <label>Enter password</label>
@@ -10,6 +8,5 @@ const Login = ({ password, setPassword }: any) => {
         </div>
     )
 }
-
 
 export default Login;

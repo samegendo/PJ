@@ -3,7 +3,6 @@ import Heart from './Heart';
 import Login from './Login';
 import AudioPlayer from './AudioPlayer';
 
-
 const App = () => {
   const [password, setPassword] = useState<any>(null);
   const data = ["31/03/2012", "31/3/2012", "31-03-2012", "31-3-2012", "31032012", "3132012"];

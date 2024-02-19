@@ -6,10 +6,10 @@ const AudioPlayer = () => {
     const mamadora1 = new Audio("/mamadora1.mp3");
     const mamadora2 = new Audio("/mamadora2.mp3");
     const afrQueen = new Audio("/afrQueen.mp3");
-    //const baby = new Audio("/baby.wma");
+    const baby = new Audio("/baby.mp3");
     const loveCrime = new Audio("/loveCrime.mp3");
     const middleNight = new Audio("/middleNight.mp3");
-    const [playlist, setPlaylist] = useState<any>([wakeup, mamadora1, mamadora2, afrQueen, loveCrime, middleNight]);
+    const [playlist, setPlaylist] = useState<any>([baby, wakeup, mamadora1, mamadora2, afrQueen, loveCrime, middleNight]);
     const [counter, setCounter] = useState<any>(0);
 
     const handleStopButton = (callback?: any) => {
@@ -35,10 +35,6 @@ const AudioPlayer = () => {
     const handleNextButton = () => {
         handleStopButton(handleCounter(handlePlayButton(1)));
     }
-
-    useEffect(() => {
-        console.log(counter)
-    }, [counter])
 
     return (
         <div>
