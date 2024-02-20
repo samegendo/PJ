@@ -204,5 +204,9 @@ export default [
     "Jij wil in mijn poep bijten.",
     "Samen sushi ontdekt in Kruibeke",
     "Staan de vuilbakken buiten??",
-    "Je niet aanraken als ik kip heb gesneden :D."
+    "Je niet aanraken als ik kip heb gesneden :D.",
+    "Arm in arm een wandelingetje maken in onze grote tuin :D.",
+    "Spoortje op jouw wang als je wakker wordt :D.",
+    "Als je zo blijft groeien word je ooit nog premier ;).",
+    "Telkens wanneer ik jou mis, kijk in mijn hart. Want dat is de enige plaats waar ik jou kan vinden."
 ]
