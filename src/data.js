@@ -222,5 +222,6 @@ export default [
     "Tante Nadia haar plant na een twee weken al dood.",
     "Fallisarna Beach, wow. Als we de lotto winnen gaan we daar trouwen.",
     "Helemaal naar Pairy Daiza en die panda's lagen te slapen zeg :D.",
-    "Naar Bokrijk met mijn familie en Saber erbij."
+    "Naar Bokrijk met mijn familie en Saber erbij.",
+    "Ik heb nog nooit iemand zo graag gezien als jij, nog nooit."
 ]
