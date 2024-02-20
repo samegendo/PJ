@@ -9,7 +9,8 @@ const AudioPlayer = () => {
     const baby = new Audio("/baby.mp3");
     const loveCrime = new Audio("/loveCrime.mp3");
     const middleNight = new Audio("/middleNight.mp3");
-    const [playlist, setPlaylist] = useState<any>([baby, wakeup, mamadora1, mamadora2, afrQueen, loveCrime, middleNight]);
+    const hetIsEenNacht = new Audio("/hetIsEenNacht.mp3");
+    const [playlist, setPlaylist] = useState<any>([baby, wakeup, mamadora1, mamadora2, afrQueen, loveCrime, middleNight, hetIsEenNacht]);
     const [counter, setCounter] = useState<any>(0);
 
     const handleStopButton = (callback?: any) => {
