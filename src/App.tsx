@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Heart from './Heart';
 import Login from './Login';
-import AudioPlayer from './AudioPlayer';
+import Heart2 from './Heart2';
 
 const App = () => {
   const [password, setPassword] = useState<any>(null);
@@ -19,10 +19,8 @@ const App = () => {
 
   return (
     <div>
-      <AudioPlayer />
-
       {password && data.includes(password)
-        ? <Heart />
+        ? <Heart2 />
         : <Login password={password} setPassword={handlePassword} />
       }
     </div>
